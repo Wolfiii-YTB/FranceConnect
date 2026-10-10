@@ -1,0 +1,39 @@
+{
+  "name": "franceconnect-ent",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "postinstall": "prisma generate",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:seed": "prisma db seed",
+    "db:cleanup-demo": "tsx scripts/remove-demo-accounts.ts",
+    "db:studio": "prisma studio",
+    "test": "tsx --test src/lib/password.test.ts src/lib/grades.test.ts src/lib/pdf.test.ts src/lib/attendance.test.ts src/lib/lessons.test.ts src/lib/timetable.test.ts src/lib/discipline-points.test.ts",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.0",
+    "dotenv": "^16.6.1",
+    "prisma": "6.19.3",
+    "tailwindcss": "4.3.3",
+    "tsx": "^4",
+    "typescript": "^5.9.3"
+  }
+}
